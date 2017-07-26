@@ -1,0 +1,50 @@
+@import "variables"
+
+@import "mixins/css/css3"
+@import "mixins/css/positioning"
+@import "mixins/helper/helper"
+
+@import "mixins/grid/mediaqueries"
+@import "mixins/grid/grid"
+
+@import "mixins/divi"
+@import "mixins/wordpress/post"
+
++custom-divi-module('cw-module-teaser-image')
+  +relative
+  line-height: 0
+  .teaser-image
+    max-width: 100% !important
+    +min-width-xs
+      max-width: 50% !important
+    +min-width-sm
+      max-width: 50% !important
+    +min-width-lg
+      max-width: 60% !important
+  .headline-wrapper
+    background-color: rgba(255,255,255,.9)
+    text-align: center
+    padding: 10px 0
+    width: 100%
+    +absolute
+    bottom: 0
+    +min-width-xs
+      width: auto
+      border-radius: 10px
+      padding: 20px
+      margin: 20px
+      left: auto
+      right: 0
+    +min-width-sm
+      right: 20px
+      bottom: 20px
+    +min-width-md
+    +min-width(1120px)
+      right: 90px
+      bottom: 90px
+      background: none
+      margin: 0
+      padding: 0
+
+    .headline
+    .sub-headline

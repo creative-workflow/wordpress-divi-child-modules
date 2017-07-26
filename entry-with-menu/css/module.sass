@@ -1,0 +1,51 @@
+@import "variables"
+
+@import "mixins/css/css3"
+@import "mixins/css/positioning"
+@import "mixins/helper/helper"
+
+@import "mixins/grid/mediaqueries"
+@import "mixins/grid/grid"
+
+@import "mixins/divi"
+@import "mixins/wordpress/post"
+
+
++custom-divi-module('cw-module-therapy-method-menu')
+  list-style-type: none
+  margin-top: 20px
+  li
+    +inline-block
+    min-width: 20%
+    +min-width-sm
+      width: 33.3%
+    +min-width-md
+      width: 20%
+    a
+      +inline-block
+      font-size: 14px
+      color: $page-color-gray
+      width: 100%
+      padding: 7px 10px
+      &:hover, &:active, &:focus
+        text-decoration: none
+        background-color: $page-color-gray-light-light
+
++custom-divi-module('cw-module-therapy-method')
+  .menu-anchor
+    position: relative
+    visibility: hidden
+    display: inline-block
+    top: -20px
+    +min-width-md
+      top: -150px
+  +relative
+  .image
+    display: none
+    +min-width-sm
+      display: block
+      +absolute
+      right: -40px
+      bottom: 0
+
+  .content-wrapper

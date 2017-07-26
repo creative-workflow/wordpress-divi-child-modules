@@ -1,0 +1,44 @@
+@import "variables"
+
+@import "mixins/css/css3"
+@import "mixins/css/positioning"
+@import "mixins/helper/helper"
+
+@import "mixins/grid/mediaqueries"
+@import "mixins/grid/grid"
+
+@import "mixins/divi"
+@import "mixins/wordpress/post"
+
++custom-divi-module('cw-module-teaser-cite')
+  +relative
+  line-height: 0
+  padding: 0 !important
+  .teaser-image
+    max-width: 248px
+    left: 10%
+    +relative
+
+    +min-width-xs
+      max-width: 348px
+      left: 15px
+    +min-width-md
+      left: 35px
+    +min-width-lg
+      left: 65px
+
+
+  .cite-wrapper
+    background-color: rgba(255,255,255,.7)
+    border-radius: 10px
+    padding: 20px
+    margin: 0px 20px 20px 20px
+    +min-width-sm
+      +absolute
+      top: 120px
+      left: 37%
+    max-width: 548px
+    .cite-text, .cite-author
+      padding-left: 15px
+    .cite-author
+      padding-top: 30px
