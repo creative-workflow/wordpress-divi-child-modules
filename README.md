@@ -1,6 +1,6 @@
 # wordpress-divi-child-modules
 
-Example modules to use with
+Example modules to use with https://github.com/creative-workflow/wordpress-divi-child-lib
 
 ### setup
 ```
