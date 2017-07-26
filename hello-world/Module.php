@@ -1,12 +1,12 @@
 <?php
 
-class ModuleHelloWorld extends \cw\divi\ModuleExtension {
+class ModuleHelloWorld extends cw\divi\module\Extension {
   public function init() {
-    parent::init('cw-module-hallo-world', 'custom_hallo_world');
+    parent::init('cw-module-hello-world', 'custom_hello_world');
 
     $this->addDefaultFields();
 
-    $group = $this->addGroup('menu_module', 'Menu')
+    $group = $this->addGroup('main', 'Main')
                   ->tabGeneral();
 
     $group->addField('headline')
